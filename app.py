@@ -17,6 +17,10 @@ def dashboard():
 def planet():
     return render_template("planets.html")
 
+@app.route("/events")
+def events():
+    return render_template("events.html")
+
 @app.route("/filter", methods=["POST"])
 def filter_data():
     asteroids = fetch_asteroids()

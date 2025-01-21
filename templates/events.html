@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historical Asteroid Events</title>
+  <link rel="stylesheet" href="../static/estyles.css">
+  
+</head>
+<body>
+    <div style="padding: 20px;">
+
+        <a href="/" style="color: aliceblue;cursor: pointer;">back</a>
+    </div>
+  <div class="container">
+    <div class="data">
+
+        <div class="title">Historical Asteroid Events</div>
+        <div class="sub-title">A timeline of significant asteroid impacts and events</div>
+    </div>
+  </div>
+
+  <div class="sparkles-wrapper">
+    <!-- Gradients -->
+    <div class="gradient gradient-1"></div>
+    <div class="gradient gradient-2"></div>
+    <div class="gradient gradient-3"></div>
+    <div class="gradient gradient-4"></div>
+  </div>
+
+  <div class="timeline-container">
+    <div class="date-links">
+      <a href="#event1">65 Million Years Ago</a>
+      <a href="#event2">1490</a>
+      <a href="#event3">1908</a>
+      <a href="#event4">1947</a>
+      <a href="#event5">2013</a>
+      <a href="#event6">2019</a>
+      <a href="#event7">2020</a>
+    </div>
+
+    <div class="timeline">
+      <div id="event1" class="event">
+        <h3 class="event-title">Chicxulub Impact</h3>
+        <div class="event-date">~65 Million Years Ago</div>
+        <div class="event-description">
+          Believed to have caused the extinction of the dinosaurs, this asteroid created a crater over 150 kilometers in diameter in present-day Mexico's Yucatan Peninsula.
+        </div>
+      </div>
+
+      <div id="event2" class="event">
+        <h3 class="event-title">Ch’ing-yang Event</h3>
+        <div class="event-date">1490</div>
+        <div class="event-description">
+          Historical records from China suggest that a meteor shower in the Shaanxi province led to thousands of casualties, possibly due to meteor fragments.
+        </div>
+      </div>
+
+      <div id="event3" class="event">
+        <h3 class="event-title">Tunguska Event</h3>
+        <div class="event-date">June 30, 1908</div>
+        <div class="event-description">
+          A massive explosion in Siberia flattened trees over 2,000 square kilometers. Scientists believe this was caused by an asteroid or comet airburst.
+        </div>
+      </div>
+
+      <div id="event4" class="event">
+        <h3 class="event-title">Sikhote-Alin Meteorite</h3>
+        <div class="event-date">February 12, 1947</div>
+        <div class="event-description">
+          A large iron meteor exploded over the Sikhote-Alin Mountains in Russia, leaving behind fragments that formed craters in the area.
+        </div>
+      </div>
+
+      <div id="event5" class="event">
+        <h3 class="event-title">Chelyabinsk Meteor</h3>
+        <div class="event-date">February 15, 2013</div>
+        <div class="event-description">
+          A meteor exploded over Chelyabinsk, Russia, releasing 20–30 times more energy than the Hiroshima atomic bomb, injuring over 1,000 people.
+        </div>
+      </div>
+
+      <div id="event6" class="event">
+        <h3 class="event-title">Near Miss by 2019 OK</h3>
+        <div class="event-date">July 25, 2019</div>
+        <div class="event-description">
+          The asteroid 2019 OK, measuring 100 meters wide, passed within 73,000 kilometers of Earth—closer than the Moon.
+        </div>
+      </div>
+
+      <div id="event7" class="event">
+        <h3 class="event-title">Near Miss by 2020 QG</h3>
+        <div class="event-date">August 16, 2020</div>
+        <div class="event-description">
+          The asteroid 2020 QG passed just 2,950 kilometers above Earth's surface, marking one of the closest approaches ever recorded.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll(".date-links a");
+    links.forEach(link => {
+      link.addEventListener("click", event => {
+        event.preventDefault();
+        const targetId = link.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>

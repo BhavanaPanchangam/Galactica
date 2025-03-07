@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Asteroid Missions</title>
+    <link rel="stylesheet" href="../static/missions.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <span class="badge">NASA's extrordinary missions</span>
+            <h1>NASA Asteroid Missions</h1>
+            <p class="hero-text">
+                Explore NASA's groundbreaking missions dedicated to studying, sampling, and 
+                protecting Earth from near-Earth asteroids and other celestial bodies.
+            </p>
+        </div>
+
+        <!-- Missions Grid -->
+        <div class="missions-grid">
+            <!-- OSIRIS-REx -->
+            <div class="mission-card" onclick="showDetails(1)">
+                <div class="mission-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M19 9l-7 7-7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="13" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="mission-content">
+                    <h3>OSIRIS-REx</h3>
+                    <p>Sample return mission to asteroid Bennu</p>
+                </div>
+                <div class="chevron">›</div>
+            </div>
+
+            <!-- DART -->
+            <div class="mission-card" onclick="showDetails(2)">
+                <div class="mission-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 2v20M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="mission-content">
+                    <h3>DART</h3>
+                    <p>Double Asteroid Redirection Test for planetary defense</p>
+                </div>
+                <div class="chevron">›</div>
+            </div>
+
+            <!-- Dawn -->
+            <div class="mission-card" onclick="showDetails(3)">
+                <div class="mission-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                        <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="mission-content">
+                    <h3>Dawn</h3>
+                    <p>First spacecraft to orbit two different extraterrestrial bodies</p>
+                </div>
+                <div class="chevron">›</div>
+            </div>
+
+            <!-- NEAR Shoemaker -->
+            <div class="mission-card" onclick="showDetails(4)">
+                <div class="mission-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="mission-content">
+                    <h3>NEAR Shoemaker</h3>
+                    <p>First spacecraft to orbit and land on an asteroid</p>
+                </div>
+                <div class="chevron">›</div>
+            </div>
+        </div>
+
+        <!-- Mission Details -->
+        <div id="mission-details" class="mission-details hidden">
+            <div class="details-content">
+                <div class="details-header">
+                    <div id="details-icon" class="details-icon"></div>
+                    <h2 id="details-title"></h2>
+                </div>
+                
+                <!-- Key Achievements Section -->
+                <div class="achievements-section">
+                    <h3>Key Discoveries</h3>
+                    <ul id="details-list" class="details-list"></ul>
+                </div>
+                
+                <!-- Mission Facts Section -->
+                <div class="examples-section">
+                    <h3>Mission Facts</h3>
+                    <div id="examples-container" class="examples-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const missionDetails = {
+            1: {
+                title: "OSIRIS-REx",
+                icon: `<svg viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M19 9l-7 7-7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="13" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                      </svg>`,
+                details: [
+                    "Collected samples from asteroid Bennu, a potentially hazardous near-Earth object",
+                    "Discovered that Bennu's surface is covered with boulders rather than sandy beaches",
+                    "Found evidence of ancient water and organic molecules on Bennu",
+                    "Measured the Yarkovsky effect (how sunlight affects asteroid orbits)",
+                    "Observed particle ejection events from Bennu's surface",
+                    "Mapped Bennu with unprecedented precision using LIDAR",
+                    "Successfully touched down on a small, 52-foot target zone",
+                    "Returned the largest asteroid sample in history to Earth (250+ grams)"
+                ],
+                examples: [
+                    {
+                        name: "Launch & Timeline",
+                        description: "Launched September 8, 2016, reached Bennu in December 2018, collected samples in October 2020, and returned samples to Earth on September 24, 2023."
+                    },
+                    {
+                        name: "Bennu Characteristics",
+                        description: "A 1,614-foot-wide carbonaceous asteroid with a 1 in 1,750 chance of impacting Earth between 2175-2199, making it one of the most potentially hazardous known NEOs."
+                    },
+                    {
+                        name: "Scientific Instruments",
+                        description: "Equipped with cameras, spectrometers, LIDAR, and the TAGSAM collection mechanism that used nitrogen gas to blow surface material into a collection chamber."
+                    }
+                ]
+            },
+            2: {
+                title: "DART",
+                icon: `<svg viewBox="0 0 24 24" width="32" height="32">
+                        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 2v20M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
+                      </svg>`,
+                details: [
+                    "First real-world test of asteroid deflection technology",
+                    "Successfully impacted Dimorphos, a moonlet of asteroid Didymos",
+                    "Changed Dimorphos' orbital period by 32 minutes (more than expected)",
+                    "Proved kinetic impactor technology is viable for planetary defense",
+                    "Demonstrated precise autonomous targeting during final approach",
+                    "Provided first close-up images of a binary asteroid system",
+                    "Created debris ejecta that was studied by telescopes worldwide",
+                    "Validated models of asteroid impact physics and momentum transfer"
+                ],
+                examples: [
+                    {
+                        name: "Impact Event",
+                        description: "On September 26, 2022, DART intentionally crashed into Dimorphos at approximately 14,000 mph, successfully altering the asteroid's orbit around Didymos."
+                    },
+                    {
+                        name: "DRACO Camera",
+                        description: "The spacecraft's only science instrument, providing navigation and detailed surface images of Dimorphos all the way until impact."
+                    },
+                    {
+                        name: "LICIACube",
+                        description: "A small Italian-built satellite that separated from DART before impact to photograph the collision and resulting debris plume."
+                    }
+                ]
+            },
+            3: {
+                title: "Dawn",
+                icon: `<svg viewBox="0 0 24 24" width="32" height="32">
+                        <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" fill="none" stroke="currentColor" stroke-width="2"/>
+                      </svg>`,
+                details: [
+                    "First spacecraft to orbit two different extraterrestrial bodies",
+                    "Discovered bright spots on Ceres, later identified as salt deposits",
+                    "Found evidence of subsurface ice and possibly a subsurface ocean on Ceres",
+                    "Mapped Vesta's complex geology, confirming it as a differentiated body",
+                    "Discovered Vesta's massive south pole impact basin",
+                    "Identified the source of many HED meteorites as Vesta",
+                    "Used innovative ion propulsion for efficient deep space travel",
+                    "Provided detailed compositional maps of both protoplanets"
+                ],
+                examples: [
+                    {
+                        name: "Vesta Exploration",
+                        description: "Orbited Vesta from July 2011 to September 2012, studying this massive, rocky asteroid that's the second largest in the main asteroid belt."
+                    },
+                    {
+                        name: "Ceres Mission",
+                        description: "Arrived at dwarf planet Ceres in March 2015 and studied it until the mission ended in November 2018, when the spacecraft ran out of fuel."
+                    },
+                    {
+                        name: "Science Instruments",
+                        description: "Equipped with a framing camera, visible and infrared mapping spectrometer, and gamma ray and neutron detector to analyze surface composition."
+                    }
+                ]
+            },
+            4: {
+                title: "NEAR Shoemaker",
+                icon: `<svg viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>`,
+                details: [
+                    "First spacecraft to orbit an asteroid (433 Eros)",
+                    "First spacecraft to land on an asteroid's surface",
+                    "Discovered Eros has a consolidated structure, not a rubble pile",
+                    "Mapped over 100,000 craters, revealing the asteroid's history",
+                    "Found evidence that Eros formed from the remains of a larger body",
+                    "Provided detailed surface imaging down to 1-meter resolution",
+                    "Measured Eros' mass and density with unprecedented accuracy",
+                    "Detected space weathering effects on the asteroid's surface"
+                ],
+                examples: [
+                    {
+                        name: "Historic Landing",
+                        description: "On February 12, 2001, NEAR Shoemaker made a controlled descent to the surface of Eros, becoming the first spacecraft to land on an asteroid."
+                    },
+                    {
+                        name: "Mission Duration",
+                        description: "Launched February 1996, reached Eros in February 2000, and operated on the asteroid's surface for 16 days following its landing in 2001."
+                    },
+                    {
+                        name: "Asteroid 433 Eros",
+                        description: "An S-type near-Earth asteroid approximately 17 km in length with an elongated shape. It's one of the largest NEOs and occasionally passes relatively close to Earth."
+                    }
+                ]
+            }
+        };
+
+        function showDetails(id) {
+            const details = document.getElementById('mission-details');
+            const title = document.getElementById('details-title');
+            const iconContainer = document.getElementById('details-icon');
+            const list = document.getElementById('details-list');
+            const examplesContainer = document.getElementById('examples-container');
+            
+            // Set title and icon
+            title.textContent = missionDetails[id].title;
+            iconContainer.innerHTML = missionDetails[id].icon;
+            
+            // Generate details list
+            list.innerHTML = missionDetails[id].details
+                .map(detail => `<li><span class="bullet"></span>${detail}</li>`)
+                .join('');
+            
+            // Generate examples
+            examplesContainer.innerHTML = missionDetails[id].examples
+                .map(example => `
+                    <div class="example-card">
+                        <h4>${example.name}</h4>
+                        <p>${example.description}</p>
+                    </div>
+                `).join('');
+            
+            details.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+immanuel s anthony requested some changes:
+1. spacing in events page
+2. mention bc wala button in the panel
+3. back button in event page
+4. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Mining Methods</title>
+    <link rel="stylesheet" href="mining.css">
+    <style>
+        body {
+            background-color: #1b0225;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #8e7ec9;
+        }
+
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .method-card {
+            background: #241341;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .method-card:hover {
+            transform: translateY(-5px);
+            background: #440f81;
+        }
+
+        .method-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .method-card h3 {
+            margin: 15px 0 10px;
+            color: #b8abc4;
+        }
+
+        .method-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <nav class="animated-dock">
+          <a href="/" class="dock-item" data-label="Home">Home</a>
+          <a href="/planets" class="dock-item" data-label="Planets">Planets</a>
+          <a href="#" class="dock-item" data-label="Space Missions">Space Missions</a>
+          <a href="/dashboard" class="dock-item" data-label="Asteroids">Asteroids</a>
+        </nav>
+      </div>
+
+    <div class="container">
+        <h1>Asteroid Mining Methods</h1>
+        <p>Exploring Techniques for Extracting Resources from Space Rocks</p>
+
+        <div class="info">
+            <h3> What is asteroid mining?</h3>
+            <p> rftgfyuhvidbjkolpbwtyaghjkaaaajfikl</p>
+        </div>
+
+        <div class="types">
+           <h3>How are asteroid categorzied?</h3>
+            <p> Categorization of asteroids <br> category 1: C type <br> category 2: s type <br> category 3: M type</p>
+        </div>
+        
+        <div class="methods-grid">
+            <div class="method-card">
+                <!-- <img src="surface-mining.jpg" alt="Surface Mining"> -->
+                <h3>Surface Mining</h3>
+                <p>Extracting minerals directly from the asteroid's surface.</p>
+            </div>
+            
+            <div class="method-card">
+                <!-- <img src="tunneling.jpg" alt="Tunneling & Drilling"> -->
+                <h3>Tunneling & Drilling</h3>
+                <p>Digging into the asteroid to access deeper resources.</p>
+            </div>
+
+            <div class="method-card">
+                <!-- <img src="thermal.jpg" alt="Thermal Extraction"> -->
+                <h3>Thermal Extraction</h3>
+                <p>Using heat to vaporize and collect valuable materials.</p>
+            </div>
+
+            <div class="method-card">
+                <!-- <img src="magnetic.jpg" alt="Magnetic Rakes"> -->
+                <h3>Magnetic Rakes</h3>
+                <p>Collecting iron-rich minerals using magnetic fields.</p>
+            </div>
+
+            <div class="method-card">
+                <!-- <img src="robots.jpg" alt="Autonomous Mining Robots"> -->
+                <h3>Autonomous Mining Robots</h3>
+                <p>AI-driven machines to mine resources independently.</p>
+            </div>
+
+            <div class="method-card">
+                <!-- ss<img src="chemical.jpg" alt="Chemical Processing"> -->
+                <h3>Chemical Processing</h3>
+                <p>Utilizing chemicals to extract valuable elements.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+mining,css
+/* General Styling */
+body {
+    background-color: #1a1a2e; /* Dark theme */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Mining Methods */
+.mining-methods-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Individual Method Card */
+.mining-method-card {
+    background-color: #252545; /* Dark card background */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.mining-method-card:hover {
+    transform: scale(1.05);
+    background-color: #34345a; /* Slightly lighter on hover */
+}
+
+/* Image Styling */
+.mining-method-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Method Title */
+.mining-method-card h3 {
+    font-size: 1.5rem;
+    color: #ffcc00; /* Golden tone for a space-like theme */
+}
+
+/* Description */
+.mining-method-card p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+.animated-dock {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: rgba(12, 12, 14, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+
+mining .html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asteroid Mining Methods</title>
+  <link rel="stylesheet" href="../static/mining.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .sub-title {
+      font-size: 1.2rem;
+      color: #bbbbbb;
+    }
+
+    .glass-container {
+            background: rgba(255, 255, 255, 0.1);
+            /* border-radius: 15px; */
+            padding: 2px 4px;
+            text-align: center;
+            backdrop-filter: blur(1px);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+          
+        }
+        .glass-container h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+</style>
+</head>
+<body>
+  <video class="video-background" autoplay loop muted>
+    <source src="../static/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="container">
+    <a href="/">back</a>
+    <div style="align-items: center;" class="data">
+      <div class="title">
+        <div class="glass-container">
+            <h1>Asteroid Mining Methods</h1>
+        </div>
+    </div>
+      <div class="sub-title">Explore how to extract useful resources from asteroids </div>
+    </div>
+  </div>

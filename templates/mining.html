@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Mining</title>
+    <link rel="stylesheet" href="../static/mining.css">
+</head>
+<body>
+
+    <video class="video-background" autoplay loop muted>
+        <source src="../static/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    <div class="parallax"></div>
+    
+    <header>
+        <h1>Asteroid Mining: The Future of Space Exploration</h1>
+    </header>
+
+    <section class="container glass">
+        <h2>🪐 Why Mine Asteroids?</h2>
+        <p>Asteroids contain precious metals like iron, nickel, platinum, and gold. Mining them could provide essential resources for space travel and industry.</p>
+        <!-- <img src="astronaut-bike.png" alt="Astronaut on a bike" class="animated-img"> -->
+    </section>
+
+    <section class="container glass">
+        <h2>🪐 Types of Asteroids</h2>
+        <div class="asteroid-types">
+            <div class="type">
+                <h3>C-Type</h3>
+                <p>Rich in carbon compounds and frozen water.</p>
+                <div class="rotate-asteroid"></div>
+            </div>
+            <div class="type">
+                <h3>S-Type</h3>
+                <p>Contains silicate minerals and metals.</p>
+                <div class="rotate-asteroid"></div>
+            </div>
+            <div class="type">
+                <h3>M-Type</h3>
+                <p>Metal-rich, great for mining valuable resources.</p>
+                <div class="rotate-asteroid"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container glass">
+        <h2>🪐 How Would Space Mining Work?</h2>
+        <p>Mining involves robotic missions, solar-powered equipment, and low-gravity extraction methods. The goal is to make space travel sustainable.</p>
+        <!-- <img src="space-mining.png" alt="Mining equipment on an asteroid" class="animated-img"> -->
+    </section>
+
+    <section class="container glass">
+        <h2>🪐 Existing and Proposed Methods for Asteroid Mining</h2>
+        <div class="mining-methods-container">
+            <div class="mining-method-card">
+                <h3>Surface Mining (Strip Mining)</h3>
+                <p>Uses robots to scrape the surface of an asteroid to collect valuable materials like nickel, iron, platinum, and water ice.</p>
+                <p><strong>Example:</strong> NASA's OSIRIS-REx mission.</p>
+            </div>
+            <div class="mining-method-card">
+                <h3>Drilling and Borehole Mining</h3>
+                <p>Drills into the asteroid’s surface to extract minerals or volatiles.</p>
+                <p><strong>Example:</strong> Japan’s Hayabusa2 mission.</p>
+            </div>
+            <div class="mining-method-card">
+                <h3>Magnetic Rake Mining</h3>
+                <p>Uses magnets to collect metallic particles from the asteroid’s surface.</p>
+            </div>
+            <div class="mining-method-card">
+                <h3>Thermal Fracturing</h3>
+                <p>Heats the asteroid’s surface to cause fractures, making mining easier.</p>
+            </div>
+            <div class="mining-method-card">
+                <h3>Autonomous Robot Mining</h3>
+                <p>Deploys robotic miners to extract materials and transport them to a processing hub.</p>
+            </div>
+            <div class="mining-method-card">
+                <h3>Optical Mining</h3>
+                <p>Uses concentrated sunlight to heat the asteroid, causing volatiles to sublimate.</p>
+                <p><strong>Example:</strong> Proposed by NASA.</p>
+            </div>
+            <div class="mining-method-card">
+                <h3>Microbial Mining</h3>
+                <p>Uses bacteria or fungi to extract metals from asteroids.</p>
+                <p><strong>Example:</strong> The BioRock experiment on the ISS.</p>
+            </div>
+            <div class="mining-method-card">
+                <h3>Electrostatic Extraction</h3>
+                <p>Uses electric charges to levitate and collect fine dust particles.</p>
+            </div>
+            <div class="mining-method-card">
+                <h3>Laser Ablation</h3>
+                <p>Vaporizes asteroid material into plasma to collect resources.</p>
+            </div>
+            <div class="mining-method-card">
+                <h3>Bag and Capture Mining</h3>
+                <p>Encloses an asteroid in a bag and slowly extracts materials.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container glass">
+        <h2>🪐 Future Considerations</h2>
+        <ul>
+            <li><strong>On-site Processing:</strong> Refining materials in space for fuel and construction.</li>
+            <li><strong>Legal and Ethical Issues:</strong> No clear regulations on asteroid ownership and mining.</li>
+        </ul>
+        <p>🚀 Asteroid mining is a key step toward space exploration and colonization, offering access to water, metals, and rare minerals that could sustain long-term missions!</p>
+    </section>
+
+    <script>
+        document.addEventListener("mousemove", function(e) {
+            document.querySelector(".parallax").style.backgroundPositionX = e.clientX / 10 + "px";
+            document.querySelector(".parallax").style.backgroundPositionY = e.clientY / 10 + "px";
+        });
+    </script>
+</body>
+</html>

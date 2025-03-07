@@ -21,7 +21,7 @@
     font-size: 1.2rem;
     text-decoration: none;
     /* color: white; */
-    background: linear-gradient(90deg, #4e54c8, #8f94fb , #c04ec8);
+    background: linear-gradient(90deg, #381375, #ee8ffb , #c04ec8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -31,7 +31,7 @@
   
   .dock-item:hover {
     transform: translateY(-10px) scale(1.2);
-    background: linear-gradient(90deg, #4e54c8, #8f94fb , #c04ec8);
+    background: linear-gradient(90deg, #600e8f, #d98ffb , #c04ec8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

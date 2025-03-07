@@ -17,9 +17,21 @@ def dashboard():
 def planet():
     return render_template("planets.html")
 
+@app.route("/mining")
+def mining():
+    return render_template("mining.html")
+
 @app.route("/events")
 def events():
     return render_template("events.html")
+
+@app.route("/missions")
+def mission():
+    return render_template("missions.html")
+
+@app.route("/detection")
+def detect():
+    return render_template("detection.html")
 
 @app.route("/filter", methods=["POST"])
 def filter_data():
@@ -54,5 +66,5 @@ def filter_data():
 
     return render_template("dashboard.html", asteroids=filtered)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)

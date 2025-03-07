@@ -135,6 +135,19 @@ body {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
+@keyframes zoom {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.1); }
+    60% { transfrom : scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.event.highlight {
+    animation: zoom 1s ease-in-out;
+}
+
+
+
 .date-links a:hover {
     transform: translateY(-5px);
     color: #c04ec8;

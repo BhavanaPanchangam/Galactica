@@ -10,10 +10,10 @@ function createSparkle() {
   sparkle.style.height = `${size}px`;
   sparkle.style.position = "absolute";
   sparkle.style.borderRadius = "50%";
-  sparkle.style.backgroundColor = "white";
+  sparkle.style.backgroundColor = " #9B87F5";
   sparkle.style.top = `${Math.random() * 100}%`;
   sparkle.style.left = `${Math.random() * 100}%`;
-  sparkle.style.animation = `sparkleMove ${Math.random() * 10 + 10}s linear infinite`;
+  sparkle.style.animation = `sparkleMove ${Math.random() * 10 + 20}s linear infinite`;
 
   sparklesWrapper.appendChild(sparkle);
 
@@ -36,7 +36,7 @@ style.innerHTML = `
     }
     100% {
       opacity: 0;
-      transform: translateY(50vh) scale(0.5);
+      transform: translateY(100vh) scale(0.5);
     }
   }
   .sparkle {
